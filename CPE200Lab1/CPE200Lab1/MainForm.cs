@@ -39,7 +39,7 @@ namespace CPE200Lab1
                 case "X":
                     return (Convert.ToDouble(firstOperand) * Convert.ToDouble(secondOperand)).ToString();
                 case "÷":
-                    // Not allow devide be zero
+                    // Not allow devide by zero
                     if(secondOperand != "0")
                     {
                         double result;
@@ -119,6 +119,10 @@ namespace CPE200Lab1
                 case "-":
                 case "X":
                 case "÷":
+                    if(firstOperand != null)
+                    {
+                        string secondOperand = 1blDisplay.Text;
+                    }
                     firstOperand = lblDisplay.Text;
                     isAfterOperater = true;
                     break;
