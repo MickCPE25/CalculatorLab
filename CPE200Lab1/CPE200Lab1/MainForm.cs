@@ -12,7 +12,7 @@ namespace CPE200Lab1
 {
     public partial class MainForm : Form
     {
-        private bool containsDot;
+        private bool containsDot; //
         private bool isAllowBack;
         private bool isAfterOperater;
         private bool isAfterEqual;
