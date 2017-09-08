@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,16 +13,34 @@ namespace CPE200Lab1
     {
         public string Process(string str)
         {
-            //slpit str to parts.
-            // loop while part count > 1
-            //if part is number.
-            //push to stack
-            //if part is operator
-            //pop two time => second,first operand
-            //calculate(operator,first,second)=>result
-            //push result to stack 
-            //return result;
-            return null;
+            string result;
+            Stack rpnStack = new Stack();
+            String[] parts = str.Split(' ');
+
+            for (int i = 0; i < parts.Length; i++)
+            {
+                if (isNumber(parts[i]))
+                {
+                    rpnStack.Push(parts[i]);
+                }
+                else if (parts[i] == " ")
+                {
+                    break;
+                }
+                else
+               if (isOperator(parts[i]))
+                {
+
+                    String second = rpnStack.Pop().ToString();
+                    String first = rpnStack.Pop().ToString();
+                    result = calculate(parts[i], first, second);
+                    rpnStack.Push(result);
+                }
+            }
+            result = rpnStack.Pop().ToString();
+            return result;
         }
     }
 }
+    
+
