@@ -14,11 +14,11 @@ namespace CPE200Lab1
     {
         private bool isNumberPart = false;
         private bool isContainDot = false;
-        private CalculatorEngine engine;
+        private RPNCalculatorEngine engine;
         public ExtendForm()
         {
             InitializeComponent();
-            engine = new CalculatorEngine();
+            engine = new RPNCalculatorEngine();
         }
 
         private string getLastInString(string str)
