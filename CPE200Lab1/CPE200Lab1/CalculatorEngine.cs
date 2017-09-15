@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace CPE200Lab1
 {
-    class CalculatorEngine
+    public class CalculatorEngine
     {
-        protected bool isNumber(string str)
+        private bool isNumber(string str)
         {
             double retNum;
             return Double.TryParse(str, out retNum);
         }
 
-        protected bool isOperator(string str)
+        private bool isOperator(string str)
         {
             switch(str) {
                 case "+":
