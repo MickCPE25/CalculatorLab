@@ -18,6 +18,7 @@ namespace CPE200Lab1
         private bool isAfterEqual;
         private string firstOperand;
         private string operate;
+        private string operatekeep;
         private double memory;
         private RPNCalculatorEngine engine;
 
@@ -29,6 +30,7 @@ namespace CPE200Lab1
             isAfterOperater = false;
             isAfterEqual = false;
             firstOperand = null;
+            operatekeep = null;
         }
 
       
@@ -125,9 +127,15 @@ namespace CPE200Lab1
                 case "÷":
                     firstOperand = lblDisplay.Text;
                     isAfterOperater = true;
+                    operatekeep = operate;
                     break;
                 case "%":
                     // your code here
+                    double num1 = Convert.ToDouble(lblDisplay.Text) - Convert.ToDouble(firstOperand);
+                    double num2 = Convert.ToDouble(firstOperand);
+                    double repersen = (num2 / 100) * num1;
+                    lblDisplay.Text = repersen.ToString();
+                    operate = operatekeep;
                     break;
             }
             isAllowBack = false;
