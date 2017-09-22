@@ -23,7 +23,7 @@ namespace CPE200Lab1
             engine = new RPNCalculatorEngine();
         }
 
-        private bool isOperator(char ch)
+        protected bool isOperator(char ch)
         {
             switch(ch) {
                 case '+':

@@ -20,7 +20,7 @@ namespace CPE200Lab1
         private string operate;
         private string operatekeep;
         private double memory;
-        private RPNCalculatorEngine engine;
+        private SimpleCalculatorEngine engine;
 
         private void resetAll()
         {
@@ -39,7 +39,7 @@ namespace CPE200Lab1
         {
             InitializeComponent();
             memory = 0;
-            engine = new RPNCalculatorEngine();
+            engine = new SimpleCalculatorEngine();
             resetAll();
         }
 
